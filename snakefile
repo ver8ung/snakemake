@@ -1,4 +1,4 @@
-rule bwa_map:
+rule bwa_map:                                               ## using BWA to map reads to a reference genome
     input:
         "data/genome.fa",
         "data/samples/{sample}.fastq"
@@ -7,7 +7,7 @@ rule bwa_map:
     shell:
         "bwa mem {input} | samtools view -Sb - > {output}"
         
-rule samtools_sort:
+rule samtools_sort:                                         ## using SAMtools to sort the mapped reads
     input:
         "mapped_reads/{sample}.bam"
     output:
