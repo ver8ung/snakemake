@@ -46,6 +46,6 @@ rule bcftools_call:                                       ## call variants using
     input:
         "calls/all.vcf"
     output:
-        "plots/quals.svg"
+        "plots/qscore.svg"
     script:
         "scripts/qscore-plot.py"
