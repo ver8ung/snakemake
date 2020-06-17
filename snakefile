@@ -1,4 +1,9 @@
 ## define rules for snakemake to execute
+SAMPLES = ["A", "B"]                                       ## define input samples
+
+rule all:                                                  ## specify desired target file
+    input:
+        "plots/quals.svg"
 
 rule bwa_map:                                               ## using BWA to map reads to a reference genome
     input:
