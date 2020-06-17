@@ -43,4 +43,4 @@ rule bcftools_call:                                       ## call variants using
     output:
         "plots/quals.svg"
     script:
-        "scripts/plot-quals.py"
+        "scripts/qscore-plot.py"
